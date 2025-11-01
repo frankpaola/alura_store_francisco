@@ -1,1 +1,77 @@
 
+## 🚀 README.md: Análisis de Eficiencia y Recomendación de Venta - Alura Store
+
+### 🎯 Visión General del Proyecto
+
+Este proyecto se desarrolló como parte de un desafío de análisis de datos para la cadena minorista Alura Store. El objetivo principal fue evaluar el rendimiento y la eficiencia de las cuatro tiendas (`Tienda 1` a `Tienda 4`) basándose en métricas financieras, de satisfacción del cliente y operativas, para **identificar la tienda menos eficiente** y recomendar su venta al Sr. Juan, permitiendo la capitalización para un nuevo emprendimiento.
+
+-----
+
+### 📦 Estructura del Repositorio
+
+```
+.
+├── 📄 README.md              (Este archivo)
+├── 📓 alura_store_analisis.ipynb (Cuaderno principal de análisis en Colab/Jupyter)
+├── 💾 data/
+│   ├── tienda_1.csv
+│   ├── tienda_2.csv
+│   ├── tienda_3.csv
+│   ├── tienda_4.csv
+└── 🖼️ assets/
+    ├── grafico_1_ingresos_totales.png (Gráfico de Barras)
+    ├── grafico_3_dispersion_eficiencia.png (Gráfico de Dispersión)
+    └── mapa_1_distribucion_ventas.png (Análisis Geográfico)
+```
+
+-----
+
+### ⚙️ Instalación y Dependencias
+
+Para ejecutar el análisis contenido en el cuaderno (`alura_store_analisis.ipynb`), necesitarás las siguientes librerías de Python.
+
+| Librería | Versión Recomendada | Propósito |
+| :--- | :--- | :--- |
+| **Pandas** | \>= 1.4.0 | Manipulación, carga y limpieza de datos. |
+| **Matplotlib** | \>= 3.5.0 | Creación de gráficos estáticos. |
+| **Seaborn** | \>= 0.11.0 | Visualización estadística avanzada. |
+
+Puedes instalar todas las dependencias usando `pip`:
+
+```bash
+pip install pandas matplotlib seaborn
+```
+
+-----
+
+### 🏃 Cómo Ejecutar el Proyecto
+
+El análisis está contenido en un único cuaderno que sigue una metodología paso a paso:
+
+1.  **Carga de Datos:** Los datos se cargan directamente desde las URLs proporcionadas por Alura, consolidando los cuatro archivos CSV en un único DataFrame (`df_consolidado`).
+2.  **Limpieza y Transformación:** Se asegura que las columnas `Precio`, `Calificación`, `Costo de envío`, `lat` y `lon` sean de tipo numérico.
+3.  **Análisis de Métricas:** Se calculan las métricas clave (Ingresos Totales, Reseña Promedio, Costo de Envío Promedio, Categoría Dominante) por tienda.
+4.  **Visualización:** Se generan **cinco gráficos** (Barras, Dispersión, Pastel, Líneas) para ilustrar los hallazgos.
+5.  **Análisis Adicional (Geográfico):** Se mapean las coordenadas para identificar patrones de concentración de ventas.
+
+**Pasos de Ejecución:**
+
+1.  Abre el cuaderno `alura_store_analisis.ipynb` en Google Colab o Jupyter Notebook.
+2.  Ejecuta las celdas secuencialmente (desde la celda de carga de datos hasta la celda del Informe Final).
+
+-----
+
+### 🔑 Conclusiones y Recomendación Final
+
+#### Tienda Recomendada para la Venta: **Tienda 4**
+
+La decisión se basa en una combinación de **bajo rendimiento financiero** y **alta ineficiencia operativa**:
+
+| Métrica Clave | Hallazgo en Tienda 4 | Implicación |
+| :--- | :--- | :--- |
+| **Ingresos Totales** | **MÁS BAJOS** de la cadena (Ver Gráfico 1) | Peor desempeño financiero y baja rentabilidad. |
+| **Costo Envío Promedio** | **MÁS ALTO** ($6,560.10) | Mayor ineficiencia logística, elevando costos operativos. |
+| **Eficiencia** | Peor punto en el Gráfico de Dispersión (Ingresos bajos / Costo alto) | Baja rentabilidad que no se justifica por volumen o satisfacción. |
+| **Análisis Geográfico** | Baja penetración en los principales *hotspots* de demanda. | Alcance de mercado ineficaz. |
+
+La venta de la Tienda 4 proporciona el capital de desinversión necesario, eliminando el activo menos productivo y más costoso de operar.
